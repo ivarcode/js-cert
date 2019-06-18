@@ -271,12 +271,49 @@ console.log(carrot.name); // => should be 'carrot'
 
 
 
+class Thermostat {
+    /* Alter code below this line */
+    constructor(tempf) {
+        this._temperature = tempf;
+    }
+    get temperature() {
+        return (5 / 9) * (this._temperature - 32);
+    }
+    set temperature(utemp) {
+        this._temperature = utemp;
+    }
+    /* Alter code above this line */
+
+}
+const thermos = new Thermostat(76); // setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in C
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in C
 
 
 
+import { capitalizeString } from 'string_functions';
+
+"use strict";
+capitalizeString("hello!");
 
 
 
+"use strict";
+export const foo = "bar";
+export const bar = "foo";
 
+
+import * as capStr from "capitalize_strings";
+"use strict";
+
+
+"use strict";
+export default function subtract(x, y) { return x - y; }
+
+
+import subtract from "math_functions";
+"use strict";
+subtract(7, 4);
 
 
