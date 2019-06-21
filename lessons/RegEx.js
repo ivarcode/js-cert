@@ -96,3 +96,69 @@ let nonAlphabetRegex = /\W/gi; // Change this line
 let result = quoteSample.match(nonAlphabetRegex).length;
 
 
+let numString = "Your sandwich will be $5.00";
+let numRegex = /\d/gi; // Change this line
+let result = numString.match(numRegex).length;
+
+
+let numString = "Your sandwich will be $5.00";
+let noNumRegex = /\D/gi; // Change this line
+let result = numString.match(noNumRegex).length;
+
+
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z]{2,}\d*$/i; // Change this line
+let result = userCheck.test(username);
+
+
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let result = sample.match(countWhiteSpace);
+
+
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result = sample.match(countNonWhiteSpace);
+
+
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; // Change this line
+let result = ohRegex.test(ohStr);
+
+
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/; // Change this line
+let result = haRegex.test(haStr);
+
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/; // Change this line
+let result = timRegex.test(timStr);
+
+
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let result = favRegex.test(favWord);
+
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{5,})(?=\D*\d{2})/; // Change this line
+let result = pwRegex.test(sampleWord);
+
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result = reRegex.test(repeatNum);
+
+
+let huhText = "This sandwich is good.";
+let fixRegex = /good/; // Change this line
+let replaceText = "okey-dokey"; // Change this line
+let result = huhText.replace(fixRegex, replaceText);
+
+
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex, ''); // Change this line
+console.log(result);
+
+
